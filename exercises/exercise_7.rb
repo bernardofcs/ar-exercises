@@ -10,3 +10,13 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "Type the name of a store: "
+store = gets.chomp
+store = Store.new
+store.valid? # => false
+store.errors.messages.each do |message|
+  puts "--------"  
+  puts message
+end
+
+
